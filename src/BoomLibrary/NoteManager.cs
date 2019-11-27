@@ -83,11 +83,12 @@ namespace BoomLibrary
         public int MoveNoteForward(Note note)
         {
             currentStatus = note.GetStatus;
-            if(currentStatus == GTD_Status.GetValues()
+            if (currentStatus == Finished)
             {
+                FinishNote();
                 RewardWithBooms();
             }
-            
+
             note.SetStatus(currentStatus++);
 
             //note.SetStatus(note.GetStatus++);
@@ -95,9 +96,31 @@ namespace BoomLibrary
 
         //Metod som returnerar Booms
 
-        public string RewardWithBooms(int boomcounter)
+        public int RewardWithBooms(int boomcounter)
         {
-            string str = "BOOM";
+            return boomcounter;
+        }
+
+        //Metod som arkiverar och avslutar
+
+        public void FinishNote()
+        {
+
+
+        }
+
+        //Metod som ändrar beskrivning på en Note
+        public void ChangeDescription(Note note, string appendedDescription)
+        {
+            string newDescription = note.Description + appendedDescription;
+            
+        }
+
+        //Metod som ändrar titel på en Nore 
+
+        public void ChangeTitle(Note note, string newTitle)
+        {
+            string newTitle = note.Titel;
         }
     }
 }
