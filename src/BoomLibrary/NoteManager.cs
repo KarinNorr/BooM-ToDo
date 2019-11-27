@@ -83,10 +83,12 @@ namespace BoomLibrary
         public int MoveNoteForward(Note note)
         {
             currentStatus = note.GetStatus;
-            if(currentStatus = note.GetStatus.
+            if(currentStatus == GTD_Status.GetValues()
+            {
+                RewardWithBooms();
+            }
+            
             note.SetStatus(currentStatus++);
-
-
 
             //note.SetStatus(note.GetStatus++);
         }
@@ -95,7 +97,7 @@ namespace BoomLibrary
 
         public string RewardWithBooms(int boomcounter)
         {
-            string str = "";
+            string str = "BOOM";
         }
     }
 }
