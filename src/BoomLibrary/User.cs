@@ -1,13 +1,16 @@
+using System.Collections.Generic;
+using System;
+
 namespace BoomLibrary
 {
+    [Serializable]
     public class User
     {
         private string name;
         private int boomSum;
         // TODO: Id Guid  
-        // TODO: List<Notes> notes = new List<Notes>();       
+        private List<Note> notes = new List<Note>();       
         // Konstruktor
-        p
         static void CreatUser()
         {
             var user = new User();
